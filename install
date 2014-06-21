@@ -1,0 +1,29 @@
+#!/bin/bash
+
+echo "Updating git"
+#sudo rm /var/lib/apt/lists/lock
+#sudo rm /var/cache/apt/archives/lock
+
+sudo apt-get update
+
+echo "Installing git"
+sudo apt-get install git -y --force-yes
+git config --global user.email "alecjohanson@gmail.com"
+git config --global user.name "Alec Johanson"
+
+echo "Installing Curl"
+sudo apt-get install curl -y --force-yes
+
+echo "Getting zsh"
+sudo apt-get install zsh -y --force-yes
+
+echo "Now for oh-my-zsh"
+curl -L http://install.ohmyz.sh | sh
+
+echo "Let's get you tmux"
+sudo apt-get install tmux -y --force-yes
+
+echo "Oh, Vim, Can't forget vim"
+sudo apt-get install vim -y --force-yes
+
+
